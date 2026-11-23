@@ -1,25 +1,28 @@
-// Proyectos: cada fila imprime su ficha. Siempre hay una abierta.
-const rows = [...document.querySelectorAll('#deck .row')];
+// Proyectos: pestañas de la terminal. Siempre hay una abierta.
+const tabs = [...document.querySelectorAll('#deck .tab')];
 
-function openRow(row) {
-    rows.forEach(r => {
-        const on = r === row;
-        r.setAttribute('aria-expanded', String(on));
-        document.getElementById(r.getAttribute('aria-controls')).classList.toggle('open', on);
+function selectTab(tab) {
+    tabs.forEach(t => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
     });
 }
 
-rows.forEach((row, i) => {
-    row.addEventListener('click', () => openRow(row));
-    row.addEventListener('keydown', e => {
-        const step = e.key === 'ArrowDown' ? 1 : e.key === 'ArrowUp' ? -1 : 0;
+tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => selectTab(tab));
+    tab.addEventListener('keydown', e => {
+        const step = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
         if (!step) return;
         e.preventDefault();
-        const next = rows[(i + step + rows.length) % rows.length];
+        const next = tabs[(i + step + tabs.length) % tabs.length];
         next.focus();
-        openRow(next);
+        selectTab(next);
     });
 });
+
+if (tabs.length) selectTab(tabs[0]);
 
 // Línea de estado: marca la sección que se está leyendo.
 const navLinks = [...document.querySelectorAll('.status-nav a')];
@@ -41,7 +44,8 @@ const tick = () => { clock.textContent = 'Piura ' + timeFormat.format(new Date()
 tick();
 setInterval(tick, 30000);
 
-// Último push, leído de la API pública de GitHub. Si falla, no se muestra nada.
+// Último push, leído de la API pública de GitHub.
+// Si falla, la terminal del inicio conserva el enlace al perfil.
 const push = document.getElementById('push');
 
 function timeAgo(date) {
@@ -55,7 +59,6 @@ function timeAgo(date) {
 function showPush(repo) {
     push.textContent = `último push ${timeAgo(new Date(repo.pushed_at))} en ${repo.name}`;
     push.href = repo.html_url;
-    push.hidden = false;
 }
 
 (async () => {
@@ -69,7 +72,7 @@ function showPush(repo) {
         const data = { name: repo.name, pushed_at: repo.pushed_at, html_url: repo.html_url };
         sessionStorage.setItem('push', JSON.stringify(data));
         showPush(data);
-    } catch { /* sin red o sin cuota: la barra queda solo con la hora */ }
+    } catch { /* sin red o sin cuota: queda el enlace al perfil */ }
 })();
 
 // Copiar el correo.

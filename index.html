@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alembert Nick Moran Palacios, desarrollador full-stack en Piura</title>
-    <meta name="description" content="Construyo y mantengo el software con el que empresas de Piura despachan viajes, emiten órdenes de compra y cobran pedidos todos los días.">
+    <meta name="description" content="Desarrollador full-stack en Piura, Perú. Software en producción para empresas reales: transporte, órdenes de compra, punto de venta y gestión documental.">
     <meta name="theme-color" content="#0d0e0c">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nickdream21.github.io/web/">
     <meta property="og:title" content="Alembert Nick Moran Palacios, desarrollador full-stack">
-    <meta property="og:description" content="Software en producción para empresas de Piura: transporte, órdenes de compra, punto de venta y gestión documental.">
+    <meta property="og:description" content="Una idea vale cuando alguien la usa todos los días.">
     <meta property="og:image" content="https://nickdream21.github.io/web/og.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -19,7 +19,7 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -28,212 +28,223 @@
 
         <!-- Inicio -->
         <header class="hero" id="inicio" data-section>
-            <p class="cmd" aria-hidden="true"><span class="ps1">nick@piura:~$</span> <span class="typed">whoami</span></p>
-            <h1 class="name">Alembert Nick<br>Moran Palacios</h1>
-            <div class="hero-body">
-                <p class="role">
-                    Desarrollador full-stack. Construyo y mantengo el software con el que
-                    empresas de Piura despachan viajes, emiten órdenes de compra y cobran
-                    pedidos todos los días.
-                </p>
+            <div class="hero-text">
+                <h1 class="name">Alembert Nick<br>Moran Palacios</h1>
+                <p class="motto">Una idea vale cuando alguien la usa todos los días.</p>
                 <p class="hero-actions">
                     <a class="btn" href="#proyectos">Ver proyectos</a>
                     <a class="link" href="#contacto">Escribirme</a>
                 </p>
-                <p class="avail"><span class="dot" aria-hidden="true"></span>Disponible para proyectos</p>
+            </div>
+
+            <div class="term boot" aria-label="Terminal de presentación">
+                <div class="term-bar">
+                    <span class="term-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <span class="term-title">nick@piura: ~</span>
+                </div>
+                <div class="term-body">
+                    <p class="line"><span class="ps1" aria-hidden="true">$</span> whoami</p>
+                    <p class="out">Desarrollador full-stack</p>
+                    <p class="line"><span class="ps1" aria-hidden="true">$</span> pwd</p>
+                    <p class="out">/perú/piura</p>
+                    <p class="line"><span class="ps1" aria-hidden="true">$</span> git log -1</p>
+                    <p class="out"><a id="push" class="out-link" href="https://github.com/nickdream21" target="_blank" rel="noopener noreferrer">github.com/nickdream21</a></p>
+                    <p class="line"><span class="ps1" aria-hidden="true">$</span> estado</p>
+                    <p class="out"><span class="dot" aria-hidden="true"></span>Disponible para proyectos</p>
+                    <p class="line" aria-hidden="true"><span class="ps1">$</span> <span class="caret"></span></p>
+                </div>
             </div>
         </header>
 
         <!-- Proyectos -->
         <section class="block" id="proyectos" data-section>
-            <h2 class="cmd"><span class="ps1" aria-hidden="true">nick@piura:~$</span> proyectos</h2>
-            <p class="lead">Sistemas que hoy usan empresas reales. Elige uno para imprimir su ficha.</p>
+            <h2 class="title">Proyectos</h2>
+            <p class="lead">Sistemas que hoy usan empresas reales. Cambia de pestaña para ver cada uno.</p>
 
-            <div class="deck" id="deck">
+            <div class="term" id="deck">
+                <div class="term-bar">
+                    <span class="term-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <div class="tabs" role="tablist" aria-label="Proyectos">
+                        <button class="tab" role="tab" type="button" id="tab-websgv" aria-controls="ficha-websgv" aria-selected="true">websgv</button>
+                        <button class="tab" role="tab" type="button" id="tab-amar" aria-controls="ficha-amar" aria-selected="false">a-mar</button>
+                        <button class="tab" role="tab" type="button" id="tab-ordenes" aria-controls="ficha-ordenes" aria-selected="false">ordenes</button>
+                        <button class="tab" role="tab" type="button" id="tab-krawl" aria-controls="ficha-krawl" aria-selected="false">krawl</button>
+                    </div>
+                </div>
 
-                <button class="row" type="button" aria-expanded="true" aria-controls="ficha-websgv">
-                    <span class="row-name">WebSGV</span>
-                    <span class="row-kind">Aplicación web</span>
-                </button>
-                <div class="slot open" id="ficha-websgv">
-                    <article class="ticket">
-                        <h3 class="ticket-name">WebSGV</h3>
-                        <p class="ticket-for">Servicios Generales Viviana E.I.R.L.</p>
-                        <p class="ticket-text">
+                <div class="term-body deck-body">
+                    <div class="panel" role="tabpanel" id="ficha-websgv" aria-labelledby="tab-websgv">
+                        <p class="line"><span class="ps1" aria-hidden="true">$</span> cat websgv/info</p>
+                        <h3 class="out-name">WebSGV</h3>
+                        <p class="out-for">Servicios Generales Viviana E.I.R.L.</p>
+                        <p class="out-text">
                             Gestión de viajes para transporte de carga: despachos, seguimiento
                             con GPS, liquidaciones de gastos firmadas electrónicamente por el
                             conductor, PDF archivados y reportes, con control por roles.
                         </p>
-                        <dl class="ticket-data">
+                        <dl class="kv">
                             <div><dt>tipo</dt><dd>Aplicación web</dd></div>
                             <div><dt>stack</dt><dd>C#, ASP.NET, SQL Server</dd></div>
-                            <div><dt>estado</dt><dd>En producción</dd></div>
+                            <div><dt>estado</dt><dd class="ok">En producción</dd></div>
                         </dl>
-                        <p class="ticket-links">
-                            <a href="https://github.com/nickdream21/SGT-Sgv" target="_blank" rel="noopener noreferrer">Ver el código</a>
+                        <p class="out-links">
+                            <a class="link" href="https://github.com/nickdream21/SGT-Sgv" target="_blank" rel="noopener noreferrer">Ver el código</a>
                         </p>
-                        <p class="ticket-foot">ficha 1 de 5</p>
-                    </article>
-                </div>
+                    </div>
 
-                <button class="row" type="button" aria-expanded="false" aria-controls="ficha-amar">
-                    <span class="row-name">A Mar Pedidos</span>
-                    <span class="row-kind">Tablet Android</span>
-                </button>
-                <div class="slot" id="ficha-amar">
-                    <article class="ticket">
-                        <h3 class="ticket-name">A Mar Pedidos</h3>
-                        <p class="ticket-for">A Mar, barra cevichera</p>
-                        <p class="ticket-text">
+                    <div class="panel" role="tabpanel" id="ficha-amar" aria-labelledby="tab-amar">
+                        <p class="line"><span class="ps1" aria-hidden="true">$</span> cat a-mar/info</p>
+                        <h3 class="out-name">A Mar Pedidos</h3>
+                        <p class="out-for">A Mar, barra cevichera</p>
+                        <p class="out-text">
                             Punto de venta que funciona sin internet. Pedidos de mesa, para
                             llevar y delivery; cobro en efectivo, Yape, Plin o tarjeta; cierre
                             de caja y comandas impresas en ticketeras térmicas por red.
                         </p>
-                        <dl class="ticket-data">
+                        <dl class="kv">
                             <div><dt>tipo</dt><dd>Tablet Android, sin internet</dd></div>
                             <div><dt>stack</dt><dd>Flutter, SQLite, ESC/POS</dd></div>
-                            <div><dt>estado</dt><dd>En producción</dd></div>
+                            <div><dt>estado</dt><dd class="ok">En producción</dd></div>
                         </dl>
-                        <p class="ticket-links">
-                            <a href="https://github.com/nickdream21/restaurantAmbar" target="_blank" rel="noopener noreferrer">Ver el código</a>
-                            <a href="https://github.com/nickdream21/restaurantAmbar/tree/main/docs/capturas" target="_blank" rel="noopener noreferrer">Ver capturas</a>
+                        <p class="out-links">
+                            <a class="link" href="https://github.com/nickdream21/restaurantAmbar" target="_blank" rel="noopener noreferrer">Ver el código</a>
+                            <a class="link" href="https://github.com/nickdream21/restaurantAmbar/tree/main/docs/capturas" target="_blank" rel="noopener noreferrer">Ver capturas</a>
                         </p>
-                        <p class="ticket-foot">ficha 2 de 5</p>
-                    </article>
-                </div>
+                    </div>
 
-                <button class="row" type="button" aria-expanded="false" aria-controls="ficha-ordenes">
-                    <span class="row-name">Órdenes de Compra</span>
-                    <span class="row-kind">Aplicación web</span>
-                </button>
-                <div class="slot" id="ficha-ordenes">
-                    <article class="ticket">
-                        <h3 class="ticket-name">Órdenes de Compra</h3>
-                        <p class="ticket-for">Tres empresas de Piura</p>
-                        <p class="ticket-text">
+                    <div class="panel" role="tabpanel" id="ficha-ordenes" aria-labelledby="tab-ordenes">
+                        <p class="line"><span class="ps1" aria-hidden="true">$</span> cat ordenes/info</p>
+                        <h3 class="out-name">Órdenes de Compra</h3>
+                        <p class="out-for">Tres empresas de Piura</p>
+                        <p class="out-text">
                             Emisión de órdenes de compra y de servicio en PDF desde el celular,
                             con numeración correlativa que no se repite, inicio de sesión y
                             archivo en la nube.
                         </p>
-                        <dl class="ticket-data">
+                        <dl class="kv">
                             <div><dt>tipo</dt><dd>Aplicación web, pensada para móvil</dd></div>
                             <div><dt>stack</dt><dd>Node.js, Supabase, Vercel</dd></div>
-                            <div><dt>estado</dt><dd>En producción</dd></div>
+                            <div><dt>estado</dt><dd class="ok">En producción</dd></div>
                         </dl>
-                        <p class="ticket-links">
-                            <a href="https://ordenes-compra-sgvcm.vercel.app" target="_blank" rel="noopener noreferrer">Abrir la app</a>
-                            <a href="https://github.com/nickdream21/OrdenesCompraSGVCM" target="_blank" rel="noopener noreferrer">Ver el código</a>
+                        <p class="out-links">
+                            <a class="link" href="https://ordenes-compra-sgvcm.vercel.app" target="_blank" rel="noopener noreferrer">Abrir la app</a>
+                            <a class="link" href="https://github.com/nickdream21/OrdenesCompraSGVCM" target="_blank" rel="noopener noreferrer">Ver el código</a>
                         </p>
-                        <p class="ticket-foot">ficha 3 de 5</p>
-                    </article>
-                </div>
+                    </div>
 
-                <button class="row" type="button" aria-expanded="false" aria-controls="ficha-krawl">
-                    <span class="row-name">Krawl</span>
-                    <span class="row-kind">Escritorio Windows</span>
-                </button>
-                <div class="slot" id="ficha-krawl">
-                    <article class="ticket">
-                        <h3 class="ticket-name">Krawl</h3>
-                        <p class="ticket-for">Gestor de documentos con OCR</p>
-                        <p class="ticket-text">
+                    <div class="panel" role="tabpanel" id="ficha-krawl" aria-labelledby="tab-krawl">
+                        <p class="line"><span class="ps1" aria-hidden="true">$</span> cat krawl/info</p>
+                        <h3 class="out-name">Krawl</h3>
+                        <p class="out-for">Gestor de documentos con OCR</p>
+                        <p class="out-text">
                             Extrae e indexa el contenido de PDF, Word, Excel y documentos
                             escaneados para encontrarlos por lo que dicen, con integración a
                             Google Drive.
                         </p>
-                        <dl class="ticket-data">
+                        <dl class="kv">
                             <div><dt>tipo</dt><dd>Escritorio Windows</dd></div>
                             <div><dt>stack</dt><dd>Electron, Node.js, Python</dd></div>
                             <div><dt>versiones</dt><dd>13 publicadas</dd></div>
                         </dl>
-                        <p class="ticket-links">
-                            <a href="https://github.com/nickdream21/Krawl" target="_blank" rel="noopener noreferrer">Ver el código</a>
-                            <a href="https://github.com/nickdream21/Krawl/releases" target="_blank" rel="noopener noreferrer">Ver versiones</a>
+                        <p class="out-links">
+                            <a class="link" href="https://github.com/nickdream21/Krawl" target="_blank" rel="noopener noreferrer">Ver el código</a>
+                            <a class="link" href="https://github.com/nickdream21/Krawl/releases" target="_blank" rel="noopener noreferrer">Ver versiones</a>
                         </p>
-                        <p class="ticket-foot">ficha 4 de 5</p>
-                    </article>
+                    </div>
                 </div>
-
-                <button class="row" type="button" aria-expanded="false" aria-controls="ficha-botsgv">
-                    <span class="row-name">botSGV</span>
-                    <span class="row-kind">Bot de Telegram</span>
-                </button>
-                <div class="slot" id="ficha-botsgv">
-                    <article class="ticket">
-                        <h3 class="ticket-name">botSGV</h3>
-                        <p class="ticket-for">Asistente gerencial para WebSGV</p>
-                        <p class="ticket-text">
-                            El gerente pregunta por Telegram en español y el bot responde
-                            consultando directamente la base de datos operativa, sin depender
-                            de ninguna API de pago.
-                        </p>
-                        <dl class="ticket-data">
-                            <div><dt>tipo</dt><dd>Bot de Telegram</dd></div>
-                            <div><dt>stack</dt><dd>Python, SQL Server</dd></div>
-                        </dl>
-                        <p class="ticket-links">
-                            <a href="https://github.com/nickdream21/botSGV" target="_blank" rel="noopener noreferrer">Ver el código</a>
-                        </p>
-                        <p class="ticket-foot">ficha 5 de 5</p>
-                    </article>
-                </div>
-
             </div>
 
             <p class="more">
-                Hay más en GitHub: reconocimiento facial, alquiler de vehículos y una app Android.
+                Hay más en GitHub.
                 <a class="link" href="https://github.com/nickdream21?tab=repositories" target="_blank" rel="noopener noreferrer">Ver todos los repositorios</a>
             </p>
         </section>
 
         <!-- Sobre mí -->
         <section class="block" id="sobre-mi" data-section>
-            <h2 class="cmd"><span class="ps1" aria-hidden="true">nick@piura:~$</span> sobre mí</h2>
-            <div class="about">
-                <div class="about-text">
-                    <p>
-                        Soy bachiller en Ingeniería Informática por la Universidad Nacional de
-                        Piura. Trabajo sobre todo en transporte y logística, gestión
-                        empresarial y automatización de procesos.
-                    </p>
-                    <p>
-                        Aprendo haciendo: la mejor forma de dominar una tecnología es llevarla
-                        a producción.
-                    </p>
-                </div>
-                <dl class="table">
-                    <div><dt>lenguajes</dt><dd>JavaScript, TypeScript, Python, C#, Kotlin, Dart</dd></div>
-                    <div><dt>frameworks</dt><dd>Node.js, React, ASP.NET, Electron, Flutter</dd></div>
-                    <div><dt>datos</dt><dd>SQL Server, SQLite, Supabase</dd></div>
-                    <div><dt>ia</dt><dd>TensorFlow, OpenCV, OCR, LLMs</dd></div>
-                </dl>
-            </div>
+            <h2 class="title">Sobre mí</h2>
 
-            <h3 class="sub">Trayectoria</h3>
-            <dl class="table log">
-                <div><dt>2025 a hoy</dt><dd>Integro IA en sistemas de negocio: visión por computadora, OCR y consultas en lenguaje natural.</dd></div>
-                <div><dt>2024 a hoy</dt><dd>Desarrollo y mantengo software en producción para empresas de Piura.</dd></div>
-                <div><dt>2021 a 2025</dt><dd>Ingeniería Informática, Universidad Nacional de Piura.</dd></div>
-            </dl>
+            <div class="tiles">
+                <div class="term tile-bio">
+                    <div class="term-bar">
+                        <span class="term-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                        <span class="term-title">sobre-mi.txt</span>
+                    </div>
+                    <div class="term-body">
+                        <p class="line"><span class="ps1" aria-hidden="true">$</span> cat sobre-mi.txt</p>
+                        <p class="prose">
+                            Soy bachiller en Ingeniería Informática por la Universidad Nacional
+                            de Piura. Trabajo sobre todo en transporte y logística, gestión
+                            empresarial y automatización de procesos.
+                        </p>
+                        <p class="prose">
+                            Aprendo haciendo: la mejor forma de dominar una tecnología es
+                            llevarla a producción.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="term">
+                    <div class="term-bar">
+                        <span class="term-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                        <span class="term-title">stack.txt</span>
+                    </div>
+                    <div class="term-body">
+                        <p class="line"><span class="ps1" aria-hidden="true">$</span> cat stack.txt</p>
+                        <dl class="kv kv-wide">
+                            <div><dt>lenguajes</dt><dd>JavaScript, TypeScript, Python, C#, Kotlin, Dart</dd></div>
+                            <div><dt>frameworks</dt><dd>Node.js, React, ASP.NET, Electron, Flutter</dd></div>
+                            <div><dt>datos</dt><dd>SQL Server, SQLite, Supabase</dd></div>
+                            <div><dt>ia</dt><dd>TensorFlow, OpenCV, OCR, LLMs</dd></div>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="term">
+                    <div class="term-bar">
+                        <span class="term-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                        <span class="term-title">trayectoria</span>
+                    </div>
+                    <div class="term-body">
+                        <p class="line"><span class="ps1" aria-hidden="true">$</span> git log --oneline</p>
+                        <dl class="kv kv-wide">
+                            <div><dt>2025 a hoy</dt><dd>Integro IA en sistemas de negocio: visión por computadora, OCR y consultas en lenguaje natural.</dd></div>
+                            <div><dt>2024 a hoy</dt><dd>Desarrollo y mantengo software en producción para empresas de Piura.</dd></div>
+                            <div><dt>2021 a 2025</dt><dd>Ingeniería Informática, Universidad Nacional de Piura.</dd></div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Contacto -->
         <section class="block" id="contacto" data-section>
-            <h2 class="cmd"><span class="ps1" aria-hidden="true">nick@piura:~$</span> contacto</h2>
+            <h2 class="title">Contacto</h2>
             <p class="lead">¿Tienes un proceso que hoy se lleva en papel o en Excel? Cuéntame.</p>
-            <p class="mail">
-                <a class="mail-link" href="mailto:moranpalaciosalembert@gmail.com">moranpalaciosalembert@gmail.com</a>
-                <button class="copy" type="button" id="copy" data-copy="moranpalaciosalembert@gmail.com">Copiar correo</button>
-            </p>
-            <p class="social">
-                <a class="link" href="https://github.com/nickdream21" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a class="link" href="https://www.instagram.com/nick.dream01/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            </p>
-        </section>
 
-        <footer class="foot">
-            <p># el talento se impone a lo que quiere la mayoría</p>
-        </footer>
+            <div class="term contact-term">
+                <div class="term-bar">
+                    <span class="term-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <span class="term-title">nick@piura: ~/contacto</span>
+                </div>
+                <div class="term-body">
+                    <p class="line"><span class="ps1" aria-hidden="true">$</span> contacto</p>
+                    <dl class="kv kv-contact">
+                        <div>
+                            <dt>correo</dt>
+                            <dd>
+                                <a class="link" href="mailto:moranpalaciosalembert@gmail.com">moranpalaciosalembert@gmail.com</a>
+                                <button class="copy" type="button" id="copy" data-copy="moranpalaciosalembert@gmail.com">Copiar correo</button>
+                            </dd>
+                        </div>
+                        <div><dt>github</dt><dd><a class="link" href="https://github.com/nickdream21" target="_blank" rel="noopener noreferrer">github.com/nickdream21</a></dd></div>
+                        <div><dt>instagram</dt><dd><a class="link" href="https://www.instagram.com/nick.dream01/" target="_blank" rel="noopener noreferrer">@nick.dream01</a></dd></div>
+                    </dl>
+                    <p class="comment"># el talento se impone a lo que quiere la mayoría</p>
+                    <p class="line" aria-hidden="true"><span class="ps1">$</span> <span class="caret"></span></p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Línea de estado -->
@@ -244,10 +255,7 @@
             <a href="#sobre-mi">sobre mí</a>
             <a href="#contacto">contacto</a>
         </div>
-        <div class="status-info">
-            <a id="push" class="status-push" target="_blank" rel="noopener noreferrer" hidden></a>
-            <span id="clock"></span>
-        </div>
+        <span class="status-info" id="clock"></span>
     </nav>
 
     <script src="script.js"></script>
